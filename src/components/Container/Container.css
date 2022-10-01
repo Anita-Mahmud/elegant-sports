@@ -1,0 +1,16 @@
+.container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.activity-container{
+    padding: 60px 100px;
+}
+.activity-container h1{
+    color: #400D51;
+}
+.activity-container h1 span{
+    margin-left: 18px;
+}
+.activity-container h2{
+    font-weight: 600;
+}
