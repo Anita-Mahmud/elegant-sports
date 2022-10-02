@@ -25,9 +25,11 @@
 }
 .infos{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: #712B75;
     color: white;
     border-radius: 10px;
-   
+    padding:2px 10px;
+    font-size: 18px;
+    margin-bottom: 50px;
 }

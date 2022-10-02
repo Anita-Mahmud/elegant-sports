@@ -18,9 +18,11 @@ const Container = () => {
              <h2>Anita Mahmud Jhara</h2>
              <h4><FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon><span>Dhaka,Bangladesh</span></h4>
              <div className='infos'>
-                <h4>75kg</h4>
-                <h4>4.11'</h4>
-                <h4>27yrs</h4>
+                <div>
+                <h4>Weight: 75kg</h4>
+                <h4>Height: 4.11'</h4>
+                <h4>Age: 27yrs</h4>
+                </div>
              </div>
              <Break></Break>
         </div>
