@@ -5,6 +5,7 @@ import { faDumbbell} from '@fortawesome/free-solid-svg-icons'
 import { faLocationDot} from '@fortawesome/free-solid-svg-icons'
 import Cards from '../Cards/Cards';
 import Break from '../Break/Break';
+import Detail from '../Detail/Detail';
 
 const Container = () => {
     return (
@@ -25,6 +26,7 @@ const Container = () => {
                 </div>
              </div>
              <Break></Break>
+             <Detail></Detail>
         </div>
         </div>
     );
