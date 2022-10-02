@@ -12,6 +12,7 @@ const Detail = () => {
               <h4>Break time</h4>
                <p>0s</p>
               </div>
+              <button className='btn-activity'>Activity Completed</button>
         </div>
     );
 };
