@@ -18,3 +18,16 @@
     background-color: #ECC5FB;
     padding: 25px;
 }
+.info-Container h4 span{
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 20px;
+}
+.infos{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #712B75;
+    color: white;
+    border-radius: 10px;
+   
+}
