@@ -1,0 +1,16 @@
+.breaks{
+   background-color: #712B75;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   padding: 15px;
+   border-radius: 15px;
+}
+.breaks button{
+    padding: 10px;
+    border-radius: 25px;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
