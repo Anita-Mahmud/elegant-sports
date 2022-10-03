@@ -6,6 +6,7 @@ import { faLocationDot} from '@fortawesome/free-solid-svg-icons'
 import Card from '../Card/Card';
 import Break from '../Break/Break';
 import Detail from '../Detail/Detail';
+import FAQ from '../FAQ/FAQ';
 
 const Container = () => {
     const [cards,setCards]=useState([]);
@@ -34,6 +35,7 @@ const Container = () => {
                     </Card>)
             }
         </div>
+        <FAQ></FAQ>
         </div>
         <div className='info-Container'>
              <h2>Anita Mahmud Jhara</h2>
