@@ -1,6 +1,13 @@
 import React from 'react';
 import './Detail.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Detail = ({items}) => {
+    const showToastMessage = () => {
+        toast.success('Congratulations', {
+            position: toast.POSITION.TOP_CENTER
+        });
+    };
     let totalTime = 0;
     items.forEach(item=>{
         totalTime=totalTime+parseFloat(item.time);
@@ -16,7 +23,8 @@ const Detail = ({items}) => {
               <h4>Break time</h4>
                <p>0s</p>
               </div>
-              <button className='btn-activity'>Activity Completed</button>
+              <button onClick={showToastMessage} className='btn-activity' >Activity Completed</button>
+              <ToastContainer />
         </div>
     );
 };
