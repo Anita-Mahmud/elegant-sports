@@ -1,5 +1,5 @@
 .breaks{
-   background-color: #712B75;
+   background-color: #966396;
    display: flex;
    justify-content: space-evenly;
    align-items: center;
@@ -13,4 +13,5 @@
     border: none;
     cursor: pointer;
     font-weight: 500;
+    font-size: 16px;
 }

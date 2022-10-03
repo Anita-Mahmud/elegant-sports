@@ -2,7 +2,7 @@
     margin: 50px 0;
 }
 .time-details{
-   background-color: #712B75;
+   background-color: #966396;
    display: flex;
    justify-content: space-around;
    align-items: center;
@@ -19,4 +19,5 @@
     color: white;
     padding: 15px 0;
     border: none;
+    cursor: pointer;
 }

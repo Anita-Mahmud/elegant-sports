@@ -26,10 +26,16 @@
 .infos{
     display: flex;
     justify-content: center;
-    background-color: #712B75;
+    background-color: #966396;
     color: white;
     border-radius: 10px;
     padding:2px 10px;
     font-size: 18px;
     margin-bottom: 50px;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:35px;
+    padding-top: 25px;
 }

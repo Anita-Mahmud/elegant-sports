@@ -1,19 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Container.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDumbbell} from '@fortawesome/free-solid-svg-icons'
+import { faStopwatch20} from '@fortawesome/free-solid-svg-icons'
 import { faLocationDot} from '@fortawesome/free-solid-svg-icons'
-import Cards from '../Cards/Cards';
+import Card from '../Card/Card';
 import Break from '../Break/Break';
 import Detail from '../Detail/Detail';
 
 const Container = () => {
+    const [cards,setCards]=useState([]);
+    const [items, setItems] = useState([]);
+    useEffect(()=>{
+        fetch ('fakedb/data.js')
+        .then(res=>res.json())
+        .then (data=>setCards(data))
+    },[])
+    const addToList = (item)=>{
+        const newItem = [...items, item];
+        setItems(newItem);
+    }
     return (
         <div className='container'>
             <div className='activity-container'>
-            <h1><FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon><span>Elegant-Sports-Club</span></h1>
+            <h1><FontAwesomeIcon icon={faStopwatch20}></FontAwesomeIcon><span>Elegant-Sports-Club</span></h1>
             <h2>Select Your Today's Game</h2>
-           <Cards></Cards>
+            <div className='cards-container'>
+            {
+                cards.map(card=><Card 
+                    card={card} 
+                    key={card.id}
+                    addToList = {addToList}
+                    >
+                    </Card>)
+            }
+        </div>
         </div>
         <div className='info-Container'>
              <h2>Anita Mahmud Jhara</h2>
@@ -26,7 +46,7 @@ const Container = () => {
                 </div>
              </div>
              <Break></Break>
-             <Detail></Detail>
+             <Detail items={items} key={items.id}></Detail>
         </div>
         </div>
     );
