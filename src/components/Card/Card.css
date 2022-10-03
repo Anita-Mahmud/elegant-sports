@@ -19,3 +19,8 @@
     color:white;
     font-weight: 700px;
 }
+@media screen and (max-width:576px){
+    .card-container{
+        width:100%
+    }
+}
