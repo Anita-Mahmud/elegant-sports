@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Detail.css';
-// import { addBreak } from '../../utilities/store';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -28,7 +27,7 @@ const Detail = ({items}) => {
               </div>
               <div className='time-details'>
               <h4>Break time</h4>
-              <p>{localStorage.time?JSON.parse(localStorage.time): 0} s</p>
+              <p>{localStorage.getItem('time')?JSON.parse(localStorage.getItem('time')): 0} s</p>
               </div>
               <button onClick={showToastMessage} className='btn-activity' >Activity Completed</button>
               <ToastContainer />

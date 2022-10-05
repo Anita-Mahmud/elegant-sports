@@ -1,7 +1,6 @@
 import React from 'react';
-import { addBreak } from '../../utilities/store';
 import './Break.css'
-const Break = ({btns}) => {
+const Break = ({btns,addBreak}) => {
     return (
         <div className='break-container'>
             <h3>Add A Break</h3>
