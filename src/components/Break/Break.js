@@ -1,16 +1,16 @@
 import React from 'react';
+import { addBreak } from '../../utilities/store';
 import './Break.css'
-const Break = () => {
-    
+const Break = ({btns}) => {
     return (
         <div className='break-container'>
             <h3>Add A Break</h3>
             <div className='breaks'>
-            <button id="1">10s</button>
-            <button id="2">20s</button>
-            <button id="3">30s</button>
-            <button id="4">40s</button>
-            <button id="5">50s</button>
+            {
+                btns.map(btn=>
+                <button onClick={()=>addBreak(btn.btime)}>{btn.btime}</button>
+                )
+            }
             </div>
         </div>
     );

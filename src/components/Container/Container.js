@@ -11,6 +11,7 @@ import FAQ from '../FAQ/FAQ';
 const Container = () => {
     const [cards,setCards]=useState([]);
     const [items, setItems] = useState([]);
+    const [btns,setBtns]=useState([]);
     useEffect(()=>{
         fetch ('fakedb/data.js')
         .then(res=>res.json())
@@ -20,6 +21,14 @@ const Container = () => {
         const newItem = [...items, item];
         setItems(newItem);
     }
+    const addBreak = (sec)=>{
+    localStorage.setItem('time',JSON.stringify(sec));
+}
+    useEffect (()=>{
+        fetch('fakedb/btn.js')
+        .then (res=>res.json())
+        .then(data=>setBtns(data))
+    },[addBreak]);
     return (
         <div className='container'>
             <div className='activity-container'>
@@ -47,7 +56,7 @@ const Container = () => {
                 <h4>Age: 27yrs</h4>
                 </div>
              </div>
-             <Break></Break>
+             <Break btns={btns} key={btns.id} addBreak={addBreak}></Break>
              <Detail items={items} key={items.id}></Detail>
         </div>
         </div>
